@@ -1,6 +1,6 @@
-# universal-sanitize
+# universal-sanitizer
 
-[![npm version](https://img.shields.io/npm/v/universal-sanitize.svg)](https://www.npmjs.com/package/universal-sanitize)
+[![npm version](https://img.shields.io/npm/v/universal-sanitize.svg)](https://www.npmjs.com/package/universal-sanitizer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A universal key & value sanitizer for **MongoDB, SQL, Redis, and Elasticsearch** payloads.  

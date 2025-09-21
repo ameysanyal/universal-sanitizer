@@ -4,6 +4,11 @@
   "description": "\"Pluggable key/value sanitizer for MongoDB, SQL, Redis, Elasticsearch\"",
   "license": "MIT",
   "author": "ameysanyal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ameysanyal/universal-sanitizer"
+  },
+  "homepage": "https://github.com/ameysanyal/universal-sanitizer#readme",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
