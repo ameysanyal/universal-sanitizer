@@ -1,6 +1,6 @@
 # universal-sanitizer
 
-[![npm version](https://img.shields.io/npm/v/universal-sanitize.svg)](https://www.npmjs.com/package/universal-sanitizer)
+[![npm version](https://img.shields.io/npm/v/universal-sanitizer.svg)](https://www.npmjs.com/package/universal-sanitizer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A universal key & value sanitizer for **MongoDB, SQL, Redis, and Elasticsearch** payloads.  
@@ -12,18 +12,18 @@ Designed to reduce common injection risks by stripping dangerous keys and values
 
 ## 🚀 Installation
 
-npm install universal-sanitize
+npm install universal-sanitizer
 
 ## 🛠 Usage
 
-import { sanitize } from "universal-sanitize";
+import { sanitize } from "universal-sanitizer";
 
 const clean = sanitize({ username: { $gt: "" } }, { backend: "mongo" });
 console.log(clean); // { username: {} }
 
 ## Custom Adapter
 
-import { register } from "universal-sanitize";
+import { register } from "universal-sanitizer";
 
 register("mydb", {
 forbiddenKeys: [/^\$/],
