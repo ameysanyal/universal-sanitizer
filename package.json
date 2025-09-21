@@ -1,0 +1,65 @@
+{
+  "name": "universal-sanitizer",
+  "version": "1.0.0",
+  "description": "\"Pluggable key/value sanitizer for MongoDB, SQL, Redis, Elasticsearch\"",
+  "license": "MIT",
+  "author": "ameysanyal",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "test": "cross-env NODE_ENV=test vitest --run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "prepare": "husky"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "sanitize",
+    "security",
+    "mongodb",
+    "sql",
+    "redis",
+    "elasticsearch"
+  ],
+  "sideEffects": false,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.43.0",
+    "vitest": "^3.2.4"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run lint:fix",
+      "npm run format"
+    ],
+    "*.{md,json}": [
+      "npm run format"
+    ]
+  }
+}
